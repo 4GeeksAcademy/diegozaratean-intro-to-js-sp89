@@ -1,63 +1,108 @@
 console.log('desde main')
 
 
-// console.log(1)
-// console.log(2)
-// console.log(3)
-// console.log(4)
-// console.log(5)
-
-// //for(inicialización;condicion;actuuaalización)
-// for(let i =1;i <= 50;i++){
-//     console.log(i)
+// let nombre = 'diego'
+// console.log('antes de la funcion', nombre)
+// function saludar(nombre){
+//     console.log('dentro de la funcion', nombre)
+//     console.log('Hola ', nombre)
 // }
+// console.log('despes de la funcion', nombre)
+// saludar('jose')
 
-// // i = 5
-// // 4
-
-
-
-// for(let i=20; i >= 15;i--){
-//     console.log(i)
-// }
-// // i = 14
-// // 15
-
-// for(i=0; i <= 20 ;i+=5){
-//     console.log(i +  30)
-// }
-
-
-// length.       1.      2.      3
-let nombres = ['jose','flavia','raul']
-// position.      0.     1.      2
-console.log(nombres)
-nombres.push('diego')
-console.log(nombres)
-console.log(nombres[1])
-
-
-const alumnos = ['milton','jesus','jhosep']
-console.log(alumnos)
-alumnos.push('diego')
-alumnos.push(true)
-alumnos.push(1)
-console.log(alumnos)
-
-const frutas = ['pera','cereza','mango']
-console.log(frutas)
-// frutas.unshift('uva')
-// console.log(frutas)
-
-console.log('OPCIÓN 1')
-console.log(frutas[0] + 's')
-console.log(frutas[1] + 's')
-console.log(frutas[2] + 's')
-console.log(frutas[3] + 's')
-
-console.log('OPCIÓN 2')
-// for 0 - 3 imprima pularl el elmento
-for(i= 0; i < frutas.length ;i++){
-    console.log(frutas[i] + 's')
+function sumar(a,b){
+    return a + b
 }
 
+console.log(sumar(2,2))
+console.log(sumar(1,5))
+console.log(sumar(0,7))
+console.log(sumar(10,8))
+
+
+
+
+// saludar('flavia')
+// saludar('antonio')
+
+// function transportar(origen,destino, trayecto){
+//     console.log('saliendo de ' + origen)
+//     console.log(trayecto)
+//     console.log( `llegando a ${destino} `)
+// }
+
+// transportar('casa','oficina','caminando')
+// transportar('oficina','gym','bus')
+// transportar('gym','casa','uuber')
+
+// transportar()
+// transportar()
+// transportar()
+
+// adminitido que valide si puedo entrar a un bar
+// edad 15  Tienes que esperar
+// edad 22 Puedes entrar
+
+// console.log('flag 1')
+// function adminitido(edad){
+//     if(edad >= 18){
+//         console.log('flag 2')
+//         return 'Puedes entrar'
+//         console.log('flag 3')
+//     }else{
+//         console.log('flag 4')
+//         return 'Tienes que esperar'
+//         console.log('flag 5')
+//     }
+// }
+
+// console.log(adminitido(15))
+// console.log(adminitido(22))
+
+
+// function calculateTax(income){
+//     return income * 0.1
+// }
+
+// document.querySelector('#monto').innerHTML = calculateTax(10000)
+
+
+// console.log('ANTES se ejecuto window onload');
+// window.onload = function() {
+
+//     console.log('se ejecuto window onload');
+
+// }
+// // duemra 2 segundos
+// console.log('DESPUES se ejecuto window onload');
+
+
+// funciones declarativas
+saludoDeclarativo()
+function saludoDeclarativo(){
+    console.log('Hola Declarativa')
+}
+
+// funcciones de expresión
+const saludoExpresion = function(){
+    console.log('Hola expresión')
+}
+saludoExpresion()
+
+// funciones de flecha // Arrow
+const saludoFlecha = ()=>{
+    console.log('Hola arrow')
+}
+saludoFlecha()
+
+// PSEUDO CODIGO 
+// desarrollar un generador de excusas de who,what,when,action
+// 1. definir variables
+// 2. modificar html desde js
+// 3. tomar el arrary de who y obtener un elemento aleatorio
+// 4. tomar el arrary de what y obtener un elemento aleatorio
+// 5. tomar el arrary de when y obtener un elemento aleatorio
+// 6. tomar el arrary de action y obtener un elemento aleatorio
+// 7. unir o concaternar el reusltado de 3 a 6 para armar una frase
+// 8. asiganr la frase de js a html
+// 9. unir todo
