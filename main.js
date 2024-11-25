@@ -1,108 +1,92 @@
 console.log('desde main')
 
 
-// let nombre = 'diego'
-// console.log('antes de la funcion', nombre)
-// function saludar(nombre){
-//     console.log('dentro de la funcion', nombre)
-//     console.log('Hola ', nombre)
-// }
-// console.log('despes de la funcion', nombre)
-// saludar('jose')
+// Array
+// Mario Luigi Bowser Toad Peach
 
-function sumar(a,b){
-    return a + b
+let personajesMario = ['Mario','Luigi','Bowser','Toad','Peach','star','Bowser','Bowser']
+
+console.log(personajesMario)
+
+// PSEDOCODIGO
+// crear el array nueuvo
+let personajesBuenosMario = []
+// iterar sobre el arrary original
+for(i=0;i<personajesMario.length;i++){
+    console.log(personajesMario[i])
+    // comparar lo que quiero quitar
+    if(personajesMario[i] != 'Bowser'){
+        // copio
+        // copiar el elemento
+        personajesBuenosMario.push(personajesMario[i])
+    }
 }
 
-console.log(sumar(2,2))
-console.log(sumar(1,5))
-console.log(sumar(0,7))
-console.log(sumar(10,8))
+
+// imprimir el resultado
+console.log(personajesBuenosMario)
+
+console.log(personajesMario)
+// let goodMariosCharacters = personajesMario.filter( (elemnto)=> elemnto != 'Bowser' )
+console.log(personajesMario.filter( (personaje)=> personaje != 'Bowser' ))
+console.log(personajesMario)
+// i = 0. 0 < 5 'Mario' 5000
 
 
-
-
-// saludar('flavia')
-// saludar('antonio')
-
-// function transportar(origen,destino, trayecto){
-//     console.log('saliendo de ' + origen)
-//     console.log(trayecto)
-//     console.log( `llegando a ${destino} `)
+// for(i=0;i < personajesMario.length;i++){
+//     console.log(personajesMario[i])
 // }
 
-// transportar('casa','oficina','caminando')
-// transportar('oficina','gym','bus')
-// transportar('gym','casa','uuber')
-
-// transportar()
-// transportar()
-// transportar()
-
-// adminitido que valide si puedo entrar a un bar
-// edad 15  Tienes que esperar
-// edad 22 Puedes entrar
-
-// console.log('flag 1')
-// function adminitido(edad){
-//     if(edad >= 18){
-//         console.log('flag 2')
-//         return 'Puedes entrar'
-//         console.log('flag 3')
-//     }else{
-//         console.log('flag 4')
-//         return 'Tienes que esperar'
-//         console.log('flag 5')
-//     }
+// for(i=personajesMario.length -1 ; i >=0;i--){
+//     console.log(personajesMario[i])
 // }
 
-// console.log(adminitido(15))
-// console.log(adminitido(22))
+let numbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-
-// function calculateTax(income){
-//     return income * 0.1
-// }
-
-// document.querySelector('#monto').innerHTML = calculateTax(10000)
-
-
-// console.log('ANTES se ejecuto window onload');
-// window.onload = function() {
-
-//     console.log('se ejecuto window onload');
-
-// }
-// // duemra 2 segundos
-// console.log('DESPUES se ejecuto window onload');
-
-
-// funciones declarativas
-saludoDeclarativo()
-function saludoDeclarativo(){
-    console.log('Hola Declarativa')
+for(i=0;i<numbers.length;i= i + 3){
+    console.log(numbers[i])
 }
 
-// funcciones de expresión
-const saludoExpresion = function(){
-    console.log('Hola expresión')
-}
-saludoExpresion()
+console.log( numbers.filter( (numero)=> numero > 7 ))
+console.log( numbers.filter( (numero)=> numero != 7 ))
+console.log( numbers.filter( (numero)=> numero%3 == 0 ))
+console.log( numbers.filter( (numero)=> numero > 9 ))
+console.log( numbers.filter( (numero)=> numero < 16 ))
+console.log( numbers.filter( (numero)=> numero >= 10 && numero <= 15 ))
 
-// funciones de flecha // Arrow
-const saludoFlecha = ()=>{
-    console.log('Hola arrow')
-}
-saludoFlecha()
 
-// PSEUDO CODIGO 
-// desarrollar un generador de excusas de who,what,when,action
-// 1. definir variables
-// 2. modificar html desde js
-// 3. tomar el arrary de who y obtener un elemento aleatorio
-// 4. tomar el arrary de what y obtener un elemento aleatorio
-// 5. tomar el arrary de when y obtener un elemento aleatorio
-// 6. tomar el arrary de action y obtener un elemento aleatorio
-// 7. unir o concaternar el reusltado de 3 a 6 para armar una frase
-// 8. asiganr la frase de js a html
-// 9. unir todo
+let newNumbers = []
+for(i=0;i < numbers.length;i++){
+    console.log(numbers[i] * 4)
+    newNumbers.push(numbers[i] * 4)
+}
+
+console.log(newNumbers)
+
+let mapNumbers = numbers.map( (numero)=> numero *4 )
+console.log(mapNumbers)
+
+
+console.log( personajesMario.map( (personaje)=> personaje + 's' ) )
+console.log(personajesMario)
+
+console.log( numbers.filter( (numero)=> numero > 7 ) )
+console.log( numbers.filter( (numero)=> numero > 7 ).map( (num)=> num *2) )
+
+
+personajesMario.forEach( (item)=> {
+    console.log(item)
+} )
+
+
+console.log('Do while')
+/// j = 2.  2
+/// j = 3.  3
+
+
+
+let j = 20
+do{
+    console.log(j)
+    j++
+} while( j < 10)
