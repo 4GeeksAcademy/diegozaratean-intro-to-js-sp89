@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <h1>Bienvenidos a JS ;)</h1>
 
 
@@ -16,13 +19,19 @@
     <p class="text"> text 3</p>
 
     <button onclick="changeTitle()" style="color: aqua;">Cambiar titulo</button>
+    <br><br><br>
+    <div>
+        <p>Primer dado: <span class="dado" id="dado1">6</span></p>
+        <p>Segundo dado: <span class="dado" id="dado2">2</span></p>
 
-
+        <button onclick="lanzarDados()">lanzar dados</button>
+    </div>
 
     <script>
         console.log('hola desde index')
     </script>
     <script src="main.js"></script>
-    
+
 </body>
+
 </html>
