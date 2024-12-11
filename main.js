@@ -30,41 +30,45 @@ const perro = {
 
 
 // PSEUUDOCODIGO 
-// DONE crear el boton
-// DONEcuando de click al boton haga una acción (función)
-// DONEcrear la función que cambie el titulo
 function changeTitle() {
-    console.log('changeTitle')
-    // DONE modificar el titulo con 'nuevo titulo'
-    // definir lista de estudiantes
     const students = ['Milton', 'Jose', 'Michael', 'Raul', 'Adriana']
-    // obtener un estudiante aleatorio
-    console.log(students[Math.floor(Math.random() * 4)])
-    // DONE modificar el titulo con 'nuevo titulo'
     let name = students[Math.floor(Math.random() * students.length)]
-    // DONE al h2 asignarle el saludo con el nombre aletorio
     document.querySelector('h2').innerHTML = 'hola ' + name
-    // DONE modificar el color del titulo a azul
-    // modifciar el color por medio del estilo
-    // definir una lista de colores
     const colors = ['#FFF', '#F0F', '#000', 'yellow', 'purple']
-    // obtener un color aleatorio
     let radomIndexcolor = Math.floor(Math.random() * colors.length)
     let randomColor = colors[radomIndexcolor]
-
-    console.log('randomColor', randomColor)
     document.querySelector('#title').style.backgroundColor = randomColor
 }
-// changeTitle()
 
 
 // PSEUUDOCODIGO 
 // lanzar dos dados por medio de un boton lanzar dados, los dados se visualizan como un cuadrado con ubn numero centrado en la mitad
-// DONE crear dados(js)
-
 function lanzarDados() {
     document.getElementById('dado1').innerText = Math.floor(Math.random() * 6) + 1
     document.getElementById('dado2').innerText = Math.floor(Math.random() * 6) + 1
 }
 
 lanzarDados()
+
+
+// agregar un boton y entradas para redimensionar los dados
+// PSEUUDOCODIGO 
+function changeSiza(){
+    let ancho = document.querySelector('#ancho').value
+    document.querySelector('#dado1').style.width = ancho +'px' 
+    document.querySelector('#dado2').style.width = ancho +'px' 
+    document.querySelector('#dado1').style.height = document.querySelector('#alto').value +'px' 
+    document.querySelector('#dado2').style.height = document.querySelector('#alto').value +'px' 
+}
+
+let btnDimensiones = document.getElementById('btn-dimensiones')
+btnDimensiones.addEventListener("click", function() {
+    changeSiza()
+  }); 
+
+
+
+setInterval(lanzarDados, 3000);
+
+
+
